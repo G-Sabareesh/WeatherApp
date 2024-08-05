@@ -60,8 +60,8 @@ export const DataProvider = ({ children }) => {
   const apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
   const apiAirqualityURL =
-    "http://api.openweathermap.org/data/2.5/air_pollution?";
-  const forecastURL = "http://api.openweathermap.org/data/2.5/forecast?";
+    "https://api.openweathermap.org/data/2.5/air_pollution?";
+  const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
 
   const UVURL = "https://api.openuv.io/api/v1/uv?";
 
@@ -109,9 +109,9 @@ export const DataProvider = ({ children }) => {
         forecastURL + `lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
       );
       const result = await response.json();
+      // console.log(result);
       if (result.cod !== "404") {
         setForecaseData(result.list);
-        // console.log(result.list);
       }
     } catch (e) {
       setErrorMessage(e.message);
@@ -125,6 +125,7 @@ export const DataProvider = ({ children }) => {
         headers: { "x-access-token": UVkey },
       });
       const result = await response.json();
+      // console.log(result);
       if (result.cod !== "404") {
         // setForecaseData(result.list);
         // console.log(result.result.uv);
