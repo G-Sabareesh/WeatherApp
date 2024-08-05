@@ -1,0 +1,388 @@
+.rightmain {
+  position: relative;
+  background-color: #f6f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* CSS style for header */
+.header {
+  /* background-color: red; */
+  height: 10%;
+  width: 100%;
+}
+.header .linkText {
+  /* background-color: red; */
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #01010166;
+}
+
+.header .first .active,
+.header .first .linkText:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+.header .degreeText {
+  /* background-color: red; */
+  text-align: center;
+  font-size: 1em;
+  font-weight: 900;
+  padding: 5px 10px;
+  margin: 2px;
+  color: #01010166;
+  background-color: white;
+}
+
+.header .degreeText:hover {
+  color: white;
+  background-color: #01010166;
+}
+
+.header .second .active {
+  color: white;
+  background-color: #0101014d;
+}
+
+.header .profileImage {
+  margin: 0px 2px 0px 20px;
+}
+.header .profileImage img {
+  width: 60px;
+  height: 60px;
+}
+/* CSS style for week day display */
+.week {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 25%;
+  width: 100%;
+}
+
+.week .weekcard {
+  height: 60%;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.week .weekcard .active {
+  color: black;
+}
+
+.week .weekcard .weekText {
+  color: #01010166;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.week .weekcard .weekDeg {
+  color: #01010166;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0px 10px;
+}
+.week .weekcard .active {
+  color: rgba(0, 0, 0, 0.75);
+}
+/* CSS style for highlights */
+.highlights {
+  /* background-color: gray; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65%;
+  width: 100%;
+}
+
+.highlights .section {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95%;
+  width: 95%;
+}
+
+.highlights .section .headingTitle {
+  /* background-color: green; */
+  height: 15%;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.highlights .section .cardPlace {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 85%;
+}
+
+.highlights .section .cardStyle {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap !important;
+  /* flex-direction: column; */
+  height: 100%;
+  width: 100%;
+  gap: 15px;
+  overflow: auto;
+}
+
+.highlightscard {
+  background-color: white;
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.highlightscard .cardTitle {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  text-indent: 20px;
+  height: 20%;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #01010166;
+}
+
+.highlightscard .active {
+  color: black;
+}
+
+.highlightscard .cardHighlight {
+  /* background-color: pink; */
+  height: 80%;
+}
+/* CSS style for UV index */
+.cardHighlight .uvindex {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 95%;
+}
+
+.chartValue {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* .semichart {
+  background-color: rebeccapurple;
+} */
+
+/* This CSS for wind status */
+.cardHighlight .windstatus {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.windstatus .data {
+  /* background-color: green; */
+  width: 95%;
+  height: 60%;
+}
+
+.windstatus .data span {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-indent: 15px;
+}
+
+.windstatus .additional {
+  /* background-color: aqua; */
+  width: 95%;
+  height: 40%;
+  border-top: 1px solid #f3f3f5;
+}
+
+.windstatus .additional .icon {
+  /* background-color: red; */
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.windstatus .additional .text {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-indent: 10px;
+}
+
+/* CSS style for sunrise and sunset time */
+.cardHighlight .suntime {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 80%;
+  width: 95%;
+}
+
+.suntime .sunrise,
+.suntime .sunset {
+  /* background-color: blue; */
+  height: 40%;
+  width: 90%;
+}
+
+.suntime .sunrise .sunicon,
+.suntime .sunset .sunicon {
+  /* background-color: red; */
+  width: 30%;
+  height: 100%;
+}
+
+.suntime .sunrise .suntimedisplay,
+.suntime .sunset .suntimedisplay {
+  /* background-color: red; */
+  width: 60%;
+  height: 100%;
+}
+
+.suntime .sunrise .suntimedisplay .time,
+.suntime .sunset .suntimedisplay .time {
+  /* background-color: red; */
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.suntime .sunrise .suntimedisplay .differ,
+.suntime .sunset .suntimedisplay .differ {
+  /* background-color: red; */
+  width: 100%;
+  font-size: 1em;
+  font-weight: 500;
+  color: #01010166;
+}
+
+/* CSS style fot humidity and airquality*/
+.cardHighlight .humidity {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.humidity .data {
+  /* background-color: green; */
+  width: 95%;
+  height: 60%;
+}
+
+.humidity .data span {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-indent: 15px;
+}
+
+.humidity .indicator {
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 25px;
+  border-radius: 25px;
+  border: 1px solid #01010166;
+}
+
+.humidity .indicator div {
+  height: 18px;
+  width: 18px;
+  content: "";
+  border-radius: 50%;
+}
+.humidity .indicator .active {
+  background-color: #4050d2;
+}
+
+.humidity .additional {
+  /* background-color: aqua; */
+  width: 95%;
+  height: 40%;
+  border-top: 1px solid #f3f3f5;
+}
+
+.humidity .additional .icon {
+  /* background-color: red; */
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.humidity .additional .text {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-indent: 20px;
+}
+
+/* CSS style for visibility */
+.cardHighlight .visibility {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.visibility .data {
+  /* background-color: green; */
+  width: 95%;
+  height: 60%;
+}
+
+.visibility .data span {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-indent: 15px;
+}
+
+.visibility .additional {
+  /* background-color: aqua; */
+  width: 95%;
+  height: 40%;
+  border-top: 1px solid #f3f3f5;
+}
+
+.visibility .additional .icon {
+  /* background-color: red; */
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.visibility .additional .text {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-indent: 20px;
+}

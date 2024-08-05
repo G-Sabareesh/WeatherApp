@@ -1,0 +1,21 @@
+import React from "react";
+
+import "./leftmain.css";
+
+import Search from "./Search";
+import WeatherImage from "./WeatherImage";
+import WeatherInfo from "./WeatherInfo";
+import Place from "./Place";
+
+const LeftMain = () => {
+  return(
+    <div className="leftmain" style={{height : '100%'}}>
+        <Search />
+        <WeatherImage />
+        <WeatherInfo />
+        <Place />
+    </div>
+  )
+};
+
+export default LeftMain;

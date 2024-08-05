@@ -1,0 +1,159 @@
+.leftmain {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* CSS style for search button */
+.search {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  width: 95%;
+}
+
+.search form {
+  /* background-color: red; */
+  width: 100%;
+}
+
+.search input {
+  border: none;
+}
+
+.search .input-group-text {
+  border: none !important;
+}
+
+.search input:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.search .form-control:focus {
+  border-color: none !important;
+}
+
+.search button {
+  outline: none !important;
+}
+
+.search .btn:hover {
+  color: none !important;
+}
+
+/* CSS style for weather image */
+.weatherimage {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35%;
+  width: 100%;
+}
+
+.weatherimage .sectionImage {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.weatherimage .sectionImage img {
+  /* width: 100%; */
+  height: 300px;
+  object-fit: center;
+}
+/* CSS style for weather information */
+.weatherinfo {
+  /* background-color: red; */
+  height: 35%;
+  width: 100%;
+}
+
+.weatherinfo .section1 {
+  /* background-color: gainsboro; */
+  height: 70%;
+}
+
+.weatherinfo .section1 .child {
+  /* background-color: rebeccapurple; */
+  width: 80%;
+  height: 90%;
+}
+
+.weatherinfo .bigFont {
+  font-size: 6em;
+  font-weight: 400;
+}
+
+.weatherinfo .section1 .currentText {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.weatherinfo .section2 {
+  /* background-color: red; */
+  height: 30%;
+}
+
+.weatherinfo .section2 .child {
+  /* background-color: gray; */
+  border-top: 2px solid #f3f3f5;
+  height: 100%;
+  width: 80%;
+}
+
+.weatherinfo .section2 .infoText {
+  /* background-color: red; */
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/* CSS style for place */
+.place {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15%;
+  width: 100%;
+}
+
+.place .child {
+  height: 80%;
+  width: 80%;
+}
+
+.place .placeimage {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.place .placeimage img {
+  object-fit: cover;
+  height: 100%;
+  border: none !important;
+}
+
+.place .cardTitle {
+  background-color: rgba(16, 16, 16, 0.256);
+  height: 100%;
+  width: 100%;
+}
