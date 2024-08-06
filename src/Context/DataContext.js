@@ -59,15 +59,15 @@ export const DataProvider = ({ children }) => {
   const apiKey = "65b2ed78addc4427e89fcdd3f555bbf5";
   // const apiUrl =
   //   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-  const apiUrl = "http://api.weatherapi.com/v1/current.json?&q=";
+  const apiUrl = "https://api.weatherapi.com/v1/current.json?&q=";
   const apikey = "785072b2279743e79dc140111240508";
   const apiAirqualityURL =
     "https://api.openweathermap.org/data/2.5/air_pollution?";
   const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
 
-  const UVURL = "https://api.openuv.io/api/v1/uv?";
+  // const UVURL = "https://api.openuv.io/api/v1/uv?";
 
-  const UVkey = "openuv-noo2rlzgt9q9m-io";
+  // const UVkey = "openuv-noo2rlzgt9q9m-io";
   // Get details from the api
 
   async function checkWeather(city) {
@@ -75,7 +75,7 @@ export const DataProvider = ({ children }) => {
       const response = await fetch(apiUrl + city + `&key=${apikey}`);
       const result = await response.json();
       if (result.cod !== "404") {
-        console.log(result);
+        // console.log(result);
         setfetchResult(result);
       }
     } catch (e) {
@@ -129,8 +129,10 @@ export const DataProvider = ({ children }) => {
         `${suntime} + ${city} +  &appid=${apiKey}&units=metric`
       );
       const result = await response.json();
-      console.log(result);
+      // console.log(result);
       if (result.cod !== "404") {
+        // console.log(result.visibility);
+        storeResultData("visibility", result.visibility);
         sunFormattime("sunrise", result.sys.sunrise);
         sunFormattime("sunset", result.sys.sunset);
       }
@@ -150,7 +152,7 @@ export const DataProvider = ({ children }) => {
     storeResultData("humidity", fetchValue.current.humidity);
     storeResultData("windspeed", fetchValue.current.wind_kph);
     storeResultData("winddir", fetchValue.current.wind_dir);
-    storeResultData("visibility", fetchValue.current.vis_km);
+    // storeResultData("visibility", fetchValue.current.vis_km);
     storeResultData("uv", fetchValue.current.uv);
     fetchAirQuality(fetchValue.location.lat, fetchValue.location.lon);
     fetchForeCase(fetchValue.location.lat, fetchValue.location.lon);
@@ -171,7 +173,7 @@ export const DataProvider = ({ children }) => {
   }, [inputValue]);
 
   useEffect(() => {
-    console.log(fetchresult);
+    // console.log(fetchresult);
     fetchresult && setFetchedData(fetchresult);
   }, [fetchresult]);
 

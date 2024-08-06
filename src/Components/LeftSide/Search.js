@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 
 import { IoMdCloseCircle } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
@@ -46,16 +46,14 @@ const Search = () => {
     }
   }
 
-  {
     errorMessage !== "" &&
       toast.error(`${errorMessage} \n please enter correct one`);
-  }
 
   return (
     <div className="search">
       <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -81,6 +79,7 @@ const Search = () => {
             placeholder="cityname"
             aria-label="cityname"
             aria-describedby="addon-wrapping"
+            value={inputData}
             onChange={handleInput}
           ></input>
           <span

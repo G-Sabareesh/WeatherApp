@@ -35,8 +35,12 @@ const WeekCard = ({ props }) => {
         <img src={img} alt="Weather Icon" style={{ height: "60px" }}></img>
       </span>
       <span>
-        <span className="mx-1 weekDeg ">0°</span>
-        <span className="mx-1 weekDeg">0°</span>
+        <span className={degree === 0 ? "mx-1 weekDeg active" : "mx-1 weekDeg"}>
+          0°
+        </span>
+        <span className={degree === 1 ? "mx-1 weekDeg active" : "mx-1 weekDeg"}>
+          0°
+        </span>
       </span>
     </div>
   ) : (

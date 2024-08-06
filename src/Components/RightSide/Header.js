@@ -59,9 +59,7 @@ const Header = () => {
           <div className="p-2 profileImage">
             <img
               className="rounded"
-              src={
-                "https://image.lexica.art/full_jpg/acf5676d-e1bb-47cf-8e64-b171543de0ec "
-              }
+              src="../../../asset/images/weather-news.png"
               alt="Img"
             ></img>
           </div>

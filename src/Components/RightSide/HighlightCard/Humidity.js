@@ -37,14 +37,14 @@ const Humidity = () => {
         <div className="additional d-flex align-items-center">
           <span className="text">
             {resultData.humidity <= 25
-              ? "Very Dry"
+              ? "Very Dry 🥵"
               : resultData.humidity <= 50
-              ? "Dry"
+              ? "Dry 😰"
               : resultData.humidity <= 75
-              ? "Comfortable"
+              ? "Comfortable 🙂"
               : resultData.humidity <= 100
-              ? "Humid"
-              : "None"}
+              ? "Humid 😑"
+              : "None 😐"}
           </span>
           <span className="icon d-flex align-items-center justify-content-center">
             {/* &#x1F919; */}

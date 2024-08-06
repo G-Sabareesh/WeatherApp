@@ -1,12 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import GaugeChart from "react-gauge-chart";
 import DataContext from "../../../Context/DataContext";
 const UVIndex = () => {
   const { resultData } = useContext(DataContext);
-  // console.log(resultData.uv);
-  const uvValue = resultData.uv ? Math.round((resultData.uv / 11) * 100) : 0;
   // console.log(uvValue / 100);
+
+  const [uvValue, setValue] = useState(null);
+
+  useEffect(() => {
+    // console.log(resultData);
+    const uv = resultData.uv ? Math.round((resultData.uv / 11) * 100) : 0;
+    setValue(uv);
+    // console.log("one");
+  }, [resultData.uv]);
 
   return (
     <div className="uvindex">
@@ -19,7 +26,7 @@ const UVIndex = () => {
             : uvValue <= 85
             ? "High : "
             : uvValue < 100
-            ? "Very High : "
+            ? "Very High :"
             : "None"}
         </span>
         {uvValue || 0}%<span></span>

@@ -23,10 +23,10 @@ const WeatherInfo = () => {
           <span className="bigFont">
             {resultData.tempC
               ? degree === 0
-                ? `${resultData.tempC}°`
-                : `${resultData.tempF}°f`
+                ? `${resultData.tempC}`
+                : `${resultData.tempF}`
               : "0"}
-            <sup>{degree === 0 ? "c" : "f"}</sup>
+            <sup>{degree === 0 ? "°c" : "°f"}</sup>
           </span>
 
           <span className="mediumFont mx-3 currentText">

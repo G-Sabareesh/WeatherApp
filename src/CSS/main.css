@@ -18,7 +18,7 @@
      */
     height: 100%;
     gap: 10px !important;
-    margin : 10px 0px;
+    margin: 10px 0px;
     flex-direction: column;
   }
   .leftmain {
@@ -36,7 +36,10 @@
     object-fit: center !important;
     width: 100%;
   }
-  .highlightscard{
+  .highlightscard {
+    background-color: #f6f6f8 !important;
+  }
+  .week .weekcard {
     background-color: #f6f6f8 !important;
   }
 }

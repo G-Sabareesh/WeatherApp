@@ -40,14 +40,14 @@ const AirQuality = () => {
         <div className="additional d-flex align-items-center">
           <span className="text">
             {resultData.airquality >= 4
-              ? "Poor"
+              ? "Poor 🥵"
               : resultData.airquality >= 3
-              ? "Moderate"
+              ? "Moderate 😑"
               : resultData.airquality >= 2
-              ? "Fair"
+              ? "Fair 😰"
               : resultData.airquality >= 1
-              ? "Good"
-              : "None"}
+              ? "Good 🙂"
+              : "None 😐"}
           </span>
           {/* <span className="icon d-flex align-items-center justify-content-center">
             &#x1F44E;
