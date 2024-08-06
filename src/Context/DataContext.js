@@ -32,6 +32,7 @@ export const DataProvider = ({ children }) => {
   const sunFormattime = (name, timestamp) => {
     // console.log(name, timestamp);
     // console.log(suntime);
+    storeResultData(`${name}timestamp`, timestamp);
     const date = new Date(timestamp * 1000);
     const options = {
       hour: "2-digit",
@@ -176,6 +177,22 @@ export const DataProvider = ({ children }) => {
     // console.log(fetchresult);
     fetchresult && setFetchedData(fetchresult);
   }, [fetchresult]);
+
+  useEffect(() => {
+    if (resultData.sunrisetimestamp) {
+      const sunrise = new Date(resultData.sunrisetimestamp * 1000);
+      const sunset = new Date(resultData.sunsettimestamp * 1000);
+      const current = new Date();
+      // console.log(current, sunrise, sunset);
+      if (current >= sunrise && current < sunset) {
+        storeResultData("now", "day");
+      } else {
+        storeResultData("now", "night");
+      }
+    } else {
+      console.log("no");
+    }
+  }, [resultData.sunrise]);
 
   //   console.log("InputValue :", inputValue);
 

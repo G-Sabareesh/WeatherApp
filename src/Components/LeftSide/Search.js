@@ -83,7 +83,7 @@ const Search = () => {
             onChange={handleInput}
           ></input>
           <span
-            className="bg-white input-group-text rounded-start-pill"
+            className="bg-white input-group-text rounded-end-pill"
             id="addon-wrapping"
             onClick={clearInput}
             style={{ cursor: "pointer" }}

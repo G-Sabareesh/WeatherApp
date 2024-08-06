@@ -20,7 +20,7 @@ const Place = () => {
               alt="Img"
             ></img>
           </div>
-          <div className="cardTitle  card-img-overlay d-flex justify-content-center align-items-center">
+          <div className="cardTitle card-img-overlay d-flex justify-content-center align-items-center">
             <h5
               className="card-title"
               style={{ color: "white", fontSize: "2em" }}

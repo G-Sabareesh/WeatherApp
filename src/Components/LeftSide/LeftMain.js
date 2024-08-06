@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./leftmain.css";
-import "../../CSS/main.css"
+import "../../CSS/main.css";
 
 import Search from "./Search";
 import WeatherImage from "./WeatherImage";
 import WeatherInfo from "./WeatherInfo";
 import Place from "./Place";
 
+import DataContext from "../../Context/DataContext";
+
 const LeftMain = () => {
-  return(
-    <div className="leftmain" style={{height : '100%'}}>
-        <Search />
-        <WeatherImage />
-        <WeatherInfo />
-        <Place />
+  const { resultData } = useContext(DataContext);
+
+  var background = {
+    background: resultData.now === "night" && "#141414",
+    color: resultData.now === "night" && "#fff"
+  };
+
+  return (
+    <div className="leftmain" style={background}>
+      <Search />
+      <WeatherImage />
+      <WeatherInfo />
+      <Place />
     </div>
-  )
+  );
 };
 
 export default LeftMain;
