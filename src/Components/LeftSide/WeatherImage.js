@@ -22,7 +22,9 @@ const WeatherImage = () => {
         <div className="img-fluid">
           <img
             src={
-              resultData.now === "day"
+              !resultData.now
+                ? "asset/images/logo.png"
+                : resultData.now === "day"
                 ? "asset/images/defaultWeather.png"
                 : "asset/images/Moon.png"
             }
