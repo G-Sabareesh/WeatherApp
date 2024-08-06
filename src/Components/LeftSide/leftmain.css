@@ -71,7 +71,7 @@
   overflow: hidden;
 }
 .weatherimage .sectionImage img {
-  /* width: 100%; */
+  width: 100%;
   height: 300px;
   object-fit: center;
 }
@@ -94,7 +94,7 @@
 }
 
 .weatherinfo .bigFont {
-  font-size: 6em;
+  font-size: 4em;
   font-weight: 400;
 }
 

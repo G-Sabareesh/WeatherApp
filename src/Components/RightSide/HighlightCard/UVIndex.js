@@ -13,13 +13,13 @@ const UVIndex = () => {
       <div className="chartValue mb-3">
         <span>
           {uvValue <= 20
-            ? "Low :"
+            ? "Low : "
             : uvValue <= 65
-            ? "Moderate :"
+            ? "Moderate : "
             : uvValue <= 85
-            ? "High :"
+            ? "High : "
             : uvValue < 100
-            ? "Very High :"
+            ? "Very High : "
             : "None"}
         </span>
         {uvValue || 0}%<span></span>

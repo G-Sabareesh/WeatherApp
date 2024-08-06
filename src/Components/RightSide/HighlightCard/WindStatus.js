@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { MdWindPower } from "react-icons/md";
 import DataContext from "../../../Context/DataContext";
 
 const WindStatus = () => {
@@ -11,8 +12,8 @@ const WindStatus = () => {
           <span>{`${resultData.windspeed || "0.0"}km/h`}</span>
         </div>
         <div className="additional d-flex align-items-center">
-          {/* <span className="icon ms-3 d-flex align-items-center justify-content-center"></span> */}
-          <span className="text">{`${resultData.winddeg || "0.0"}deg`}</span>
+          <span className="icon ms-3 d-flex align-items-center justify-content-center"><MdWindPower style={{color : "skyblue"}} size={200}/></span>
+          <span className="text">{`${resultData.winddir || "NEWS"}`}</span>
         </div>
       </div>
     </div>

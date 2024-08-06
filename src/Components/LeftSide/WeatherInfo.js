@@ -9,10 +9,10 @@ const WeatherInfo = () => {
 
   // console.log(resultData.imagename);
 
-  const img =
-    resultData.imagename === undefined
-      ? "asset/images/defaultWeather.png"
-      : `asset/images/${resultData.imagename}.png`;
+  // const img =
+  //   resultData.imagename === undefined
+  //     ? "asset/images/defaultWeather.png"
+  //     : `asset/images/${resultData.imagename}.png`;
 
   // console.log(img);
 
@@ -21,12 +21,14 @@ const WeatherInfo = () => {
       <div className="section1 d-flex justify-content-center align-items-center">
         <div className="child d-flex justify-content-evenly flex-column">
           <span className="bigFont">
-            {resultData.temp
+            {resultData.tempC
               ? degree === 0
-                ? `${resultData.temp}°c`
-                : `${resultData.temp * 1.8 + 32}°f`
-              : "0°f"}
+                ? `${resultData.tempC}°`
+                : `${resultData.tempF}°f`
+              : "0"}
+            <sup>{degree === 0 ? "c" : "f"}</sup>
           </span>
+
           <span className="mediumFont mx-3 currentText">
             {resultData.time || "Day, 00.00"}
           </span>
@@ -34,7 +36,11 @@ const WeatherInfo = () => {
       </div>
       <div className="section2 d-flex justify-content-center flex-column align-items-center">
         <div className="child d-flex justify-content-start align-items-center flex-row">
-          <img src={img} alt="Img" style={{ height: "50px" }}></img>
+          <img
+            src={resultData.icon || "asset/images/defaultWeather.png"}
+            alt="Img"
+            style={{ height: "50px" }}
+          ></img>
           <span className="infoText d-flex justify-content-start align-items-center">
             {resultData.imagename || "Description"}
           </span>

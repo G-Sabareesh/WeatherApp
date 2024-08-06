@@ -82,7 +82,6 @@ const Search = () => {
             aria-label="cityname"
             aria-describedby="addon-wrapping"
             onChange={handleInput}
-            value={"" + inputData}
           ></input>
           <span
             className="bg-white input-group-text rounded-start-pill"

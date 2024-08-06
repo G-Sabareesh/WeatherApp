@@ -25,7 +25,7 @@ const Place = () => {
               className="card-title"
               style={{ color: "white", fontSize: "2em" }}
             >
-              {resultData.cityname ? resultData.cityname         : "City Name"}
+              {resultData.cityname ? resultData.cityname : "City Name"}
             </h5>
           </div>
         </div>

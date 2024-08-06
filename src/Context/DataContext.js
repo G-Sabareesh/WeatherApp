@@ -6,7 +6,7 @@ export const DataProvider = ({ children }) => {
   //   City Name from Component/LeftSide/Search.js
   const [inputValue, setInputValue] = useState("");
 
-  const [fetchresult, setfetchResult] = useState({});
+  const [fetchresult, setfetchResult] = useState(null);
 
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -42,7 +42,7 @@ export const DataProvider = ({ children }) => {
 
   //time and day format function
   const formatDate = (timestamp) => {
-    const date = new Date(timestamp * 1000);
+    const date = new Date(timestamp);
     const options = {
       weekday: "long", // "Monday"
       //   year: "numeric", // "2024"
@@ -57,8 +57,10 @@ export const DataProvider = ({ children }) => {
 
   //   // api key for authentication and the api url
   const apiKey = "65b2ed78addc4427e89fcdd3f555bbf5";
-  const apiUrl =
-    "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+  // const apiUrl =
+  //   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+  const apiUrl = "http://api.weatherapi.com/v1/current.json?&q=";
+  const apikey = "785072b2279743e79dc140111240508";
   const apiAirqualityURL =
     "https://api.openweathermap.org/data/2.5/air_pollution?";
   const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
@@ -70,14 +72,14 @@ export const DataProvider = ({ children }) => {
 
   async function checkWeather(city) {
     try {
-      const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+      const response = await fetch(apiUrl + city + `&key=${apikey}`);
       const result = await response.json();
       if (result.cod !== "404") {
         console.log(result);
         setfetchResult(result);
       }
     } catch (e) {
-      setErrorMessage(e.message);
+      // setErrorMessage(e.message);
       // console.log(e.message);
       // console.log("error");
     }
@@ -96,7 +98,7 @@ export const DataProvider = ({ children }) => {
         storeResultData("airquality", result.list[0].main.aqi);
       }
     } catch (e) {
-      setErrorMessage(e.message);
+      // setErrorMessage(e.message);
       // console.log(e.message);
       // console.log("error");
     }
@@ -114,43 +116,46 @@ export const DataProvider = ({ children }) => {
         setForecaseData(result.list);
       }
     } catch (e) {
-      setErrorMessage(e.message);
+      // setErrorMessage(e.message);
     }
   }
 
-  async function fetchUV(lat, lon) {
+  const suntime =
+    "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+  async function fetchSun(city) {
     // console.log(lat, lon);
     try {
-      const response = await fetch(UVURL + `lat=${lat}&lng=${lon}`, {
-        headers: { "x-access-token": UVkey },
-      });
+      const response = await fetch(
+        `${suntime} + ${city} +  &appid=${apiKey}&units=metric`
+      );
       const result = await response.json();
-      // console.log(result);
+      console.log(result);
       if (result.cod !== "404") {
-        // setForecaseData(result.list);
-        // console.log(result.result.uv);
-        storeResultData("uv", result.result.uv);
+        sunFormattime("sunrise", result.sys.sunrise);
+        sunFormattime("sunset", result.sys.sunset);
       }
     } catch (e) {
-      setErrorMessage(e.message);
+      // setErrorMessage(e.message);
     }
   }
 
   function setFetchedData(fetchValue) {
-    storeResultData("cityname", fetchValue.name);
-    storeResultData("temp", fetchValue.main.temp.toFixed(1));
-    formatDate(fetchValue.dt);
-    storeResultData("imagename", fetchValue.weather[0].main);
-    storeResultData("icon", fetchValue.weather[0].icon);
-    sunFormattime("sunrise", fetchValue.sys.sunrise);
-    sunFormattime("sunset", fetchValue.sys.sunset);
-    storeResultData("humidity", fetchValue.main.humidity);
-    storeResultData("windspeed", fetchValue.wind.speed);
-    storeResultData("winddeg", fetchValue.wind.deg);
-    storeResultData("visibility", fetchValue.visibility / 1000);
-    fetchAirQuality(fetchValue.coord.lat, fetchValue.coord.lon);
-    fetchForeCase(fetchValue.coord.lat, fetchValue.coord.lon);
-    fetchUV(fetchValue.coord.lat, fetchValue.coord.lon);
+    storeResultData("cityname", fetchValue.location.name);
+    storeResultData("tempC", fetchValue.current.temp_c);
+    storeResultData("tempF", fetchValue.current.temp_f);
+    formatDate(fetchValue.location.localtime);
+    storeResultData("imagename", fetchValue.current.condition.text);
+    storeResultData("icon", fetchValue.current.condition.icon);
+
+    storeResultData("humidity", fetchValue.current.humidity);
+    storeResultData("windspeed", fetchValue.current.wind_kph);
+    storeResultData("winddir", fetchValue.current.wind_dir);
+    storeResultData("visibility", fetchValue.current.vis_km);
+    storeResultData("uv", fetchValue.current.uv);
+    fetchAirQuality(fetchValue.location.lat, fetchValue.location.lon);
+    fetchForeCase(fetchValue.location.lat, fetchValue.location.lon);
+    fetchSun(fetchValue.location.name);
+    // fetchUV(fetchValue.coord.lat, fetchValue.coord.lon);
   }
 
   // console.log(resultData);
@@ -166,7 +171,8 @@ export const DataProvider = ({ children }) => {
   }, [inputValue]);
 
   useEffect(() => {
-    fetchresult.name !== undefined && setFetchedData(fetchresult);
+    console.log(fetchresult);
+    fetchresult && setFetchedData(fetchresult);
   }, [fetchresult]);
 
   //   console.log("InputValue :", inputValue);

@@ -29,7 +29,7 @@ const Week = () => {
   // console.log(forecastData);
 
   return (
-    <div className="week">
+    <div className="week px-2">
       {weekforecast.map((item, index) => {
         return <WeekCard props={item} key={index} />;
       })}

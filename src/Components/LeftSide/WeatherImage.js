@@ -9,18 +9,18 @@ import "./leftmain.css";
 const WeatherImage = () => {
   const { resultData } = useContext(DataContext);
 
-  const img =
-    resultData.imagename === undefined
-      ? "asset/images/defaultWeather.png"
-      : `asset/images/${resultData.imagename}.png`;
-  // console.log(imagename);
-  // console.log(img);
+  // const img =
+  //   resultData.imagename === undefined
+  //     ? "asset/images/defaultWeather.png"
+  //     : `asset/images/${resultData.imagename}.png` ;
+
+      // console.log(img);
 
   return (
     <div className="weatherimage">
       <div className="sectionImage">
         <div className="img-fluid">
-          <img src={img} alt="Img"></img>
+          <img src={resultData.icon || "asset/images/defaultWeather.png"} alt="Img"></img>
         </div>
       </div>
     </div>
