@@ -10,8 +10,7 @@ const WeatherInfo = () => {
   // console.log(resultData.imagename);
 
   // const img =
-  //   resultData.imagename === undefined
-  //     ? "asset/images/defaultWeather.png"
+  //   resultData.imagename === undefined &&
   //     : `asset/images/${resultData.imagename}.png`;
 
   // console.log(img);

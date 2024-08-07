@@ -14,8 +14,8 @@ const Highlights = () => {
         <div className="cardPlace d-flex align-items-center justify-content-evenly">
           {/* <div className="cardStyle"> */}
           <HighLightsCard title={"UV Index"} />
-          <HighLightsCard title={"Wind Status"} />
           <HighLightsCard title={"Sunrise & Sunset"} />
+          <HighLightsCard title={"Wind Status"} />
           {/* </div>
           <div className="d-flex flex-row"> */}
           <HighLightsCard title={"Humidity"} />
