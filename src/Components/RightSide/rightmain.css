@@ -130,7 +130,7 @@
 }
 
 .highlights .section .cardPlace {
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: start;
@@ -143,7 +143,7 @@
 }
 
 .highlights .section .cardStyle {
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: start;

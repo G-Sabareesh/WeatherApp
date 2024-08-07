@@ -195,6 +195,25 @@ export const DataProvider = ({ children }) => {
     }
   }, [resultData.sunrise]);
 
+  useEffect(() => {
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        console.log("notsupport");
+      }
+    }
+    function showPosition(position) {
+      console.log(
+        "lat",
+        position.coords.latitude,
+        "lon",
+        position.coords.longitude
+      );
+    }
+    getLocation()
+  }, []);
+
   //   console.log("InputValue :", inputValue);
 
   return (

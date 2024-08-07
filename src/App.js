@@ -1,7 +1,8 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import "./App.css";
 import Main from "./Main";
 import DataContext from "./Context/DataContext";
+// import Footer from "./Footer";
 
 function App() {
   const { resultData } = useContext(DataContext);
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Main />
+      {/* <Footer /> */}
     </div>
   );
 }

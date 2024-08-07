@@ -15,7 +15,7 @@ const HighLightsCard = ({ title }) => {
 
   return (
     <div className="highlightscard ">
-      <div className={day === 1 ? "cardTitle active" : "cardTitle"}>
+      <div className={day === 0 ? "cardTitle active" : "cardTitle"}>
         {title}
       </div>
       <div className="cardHighlight d-flex align-items-center justify-content-center">

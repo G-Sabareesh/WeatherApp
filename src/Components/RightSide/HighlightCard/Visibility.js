@@ -17,7 +17,7 @@ const Visibility = () => {
         </div>
         <div className="additional d-flex align-items-center">
           <span className="text">
-            {visibility === undefined
+            {visibility === undefined || visibility === 0
               ? "None 😐"
               : visibility <= 1
               ? "Very Poor 🥵"
