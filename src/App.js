@@ -6,9 +6,9 @@ import DataContext from "./Context/DataContext";
 function App() {
   const { resultData } = useContext(DataContext);
 
-  resultData.now && resultData.now == "day"
+  resultData.now && resultData.now === "day"
     ? document.querySelector("body").setAttribute("data-theme", "light")
-    : resultData.now == "night"
+    : resultData.now === "night"
     ? document.querySelector("body").setAttribute("data-theme", "dark")
     : document.querySelector("body").setAttribute("data-theme", "light");
 

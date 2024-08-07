@@ -12,16 +12,16 @@ const Highlights = () => {
           <span>Today's Highlights</span>
         </div>
         <div className="cardPlace d-flex align-items-center justify-content-evenly">
-          <div className="cardStyle">
-            <HighLightsCard title={"UV Index"} />
-            <HighLightsCard title={"Wind Status"} />
-            <HighLightsCard title={"Sunrise & Sunset"} />
-            {/* </div>
+          {/* <div className="cardStyle"> */}
+          <HighLightsCard title={"UV Index"} />
+          <HighLightsCard title={"Wind Status"} />
+          <HighLightsCard title={"Sunrise & Sunset"} />
+          {/* </div>
           <div className="d-flex flex-row"> */}
-            <HighLightsCard title={"Humidity"} />
-            <HighLightsCard title={"Visibility"} />
-            <HighLightsCard title={"Air Quality"} />
-          </div>
+          <HighLightsCard title={"Humidity"} />
+          <HighLightsCard title={"Visibility"} />
+          <HighLightsCard title={"Air Quality"} />
+          {/* </div> */}
         </div>
       </div>
     </div>

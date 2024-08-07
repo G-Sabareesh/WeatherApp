@@ -24,9 +24,10 @@
   .leftmain {
     width: 100% !important;
     height: 100vh !important;
+    border-radius: 8px !important;
   }
   .rightmain {
-    background-color: var( --background-right-container) !important;
+    background-color: var(--background-right-container) !important;
     width: 100% !important;
     height: 100vh !important;
     border-radius: 8px !important;
@@ -38,6 +39,9 @@
   }
   .highlightscard {
     background-color: var(--right-card-highlight-card-color) !important;
+  }
+  .highlights .section .cardStyle {
+    justify-content: center !important;
   }
   .week .weekcard {
     background-color: var(--right-card-highlight-card-color) !important;

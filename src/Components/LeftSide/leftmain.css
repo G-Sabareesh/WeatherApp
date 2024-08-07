@@ -9,6 +9,8 @@
   width: 30%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  transition: background-color 2s ease-in-out;
+
 }
 
 /* CSS style for search button */

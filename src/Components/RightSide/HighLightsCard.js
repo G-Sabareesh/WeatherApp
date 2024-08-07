@@ -14,7 +14,7 @@ const HighLightsCard = ({ title }) => {
   const { day } = useContext(DataContext);
 
   return (
-    <div className="highlightscard">
+    <div className="highlightscard ">
       <div className={day === 1 ? "cardTitle active" : "cardTitle"}>
         {title}
       </div>

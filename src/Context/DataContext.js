@@ -76,7 +76,7 @@ export const DataProvider = ({ children }) => {
       const response = await fetch(apiUrl + city + `&key=${apikey}`);
       const result = await response.json();
       if (result.cod !== "404") {
-        console.log(result);
+        // console.log(result);
         setfetchResult(result);
       }
     } catch (e) {
