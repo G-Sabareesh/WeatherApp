@@ -1,3 +1,4 @@
+// import { CategoryScale } from "chart.js";
 import { createContext, useEffect, useState } from "react";
 
 const DataContext = createContext({});
@@ -56,6 +57,33 @@ export const DataProvider = ({ children }) => {
     storeResultData("time", date.toLocaleString("en-US", options)); // Customize locale as needed
   };
 
+  async function wiki(cityName) {
+    const endpoint = "https://en.wikipedia.org/w/api.php";
+    const params = new URLSearchParams({
+      action: "query",
+      format: "json",
+      titles: cityName,
+      prop: "extracts|pageimages",
+      exintro: true,
+      explaintext: true,
+      piprop: "original", // Get the original image URL
+      origin: "*",
+    });
+
+    try {
+      const response = await fetch(`${endpoint}?${params}`);
+      const data = await response.json();
+      const pages = data.query.pages;
+      // console.log(pages)
+      for (const pageId in pages) {
+        const page = pages[pageId];
+        storeResultData("bgimage", page.original.source);
+      }
+    } catch (e) {
+      // console.log(e);
+    }
+  }
+
   //   // api key for authentication and the api url
   const apiKey = "65b2ed78addc4427e89fcdd3f555bbf5";
   // const apiUrl =
@@ -76,7 +104,7 @@ export const DataProvider = ({ children }) => {
       const response = await fetch(apiUrl + city + `&key=${apikey}`);
       const result = await response.json();
       if (result.cod !== "404") {
-        // console.log(result); 
+        // console.log(result);
         setfetchResult(result);
       }
     } catch (e) {
@@ -143,6 +171,7 @@ export const DataProvider = ({ children }) => {
   }
 
   function setFetchedData(fetchValue) {
+    wiki(fetchValue.location.name);
     storeResultData("cityname", fetchValue.location.name);
     storeResultData("tempC", fetchValue.current.temp_c);
     storeResultData("tempF", fetchValue.current.temp_f);

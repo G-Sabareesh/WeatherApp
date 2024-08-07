@@ -56,7 +56,7 @@ const Header = () => {
           >
             ℉
           </div>
-          <div className="p-2 profileImage">
+          <div className="px-2 profileImage">
             <img
               className="rounded"
               src="../../../asset/images/weather-news.png"

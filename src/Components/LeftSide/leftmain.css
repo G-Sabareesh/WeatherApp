@@ -1,6 +1,6 @@
 .leftmain {
   background-color: var(--background-left-container);
-  color : var(--textcolor-left-container) !important;
+  color: var(--textcolor-left-container) !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,6 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: background-color 2s ease-in-out;
-
 }
 
 /* CSS style for search button */
@@ -159,7 +158,7 @@
 }
 
 .place .cardTitle {
-  background-color: rgba(16, 16, 16, 0.588);
+  background-color: rgba(16, 16, 16, 0.435);
   height: 100%;
   width: 100%;
   border: none !important;

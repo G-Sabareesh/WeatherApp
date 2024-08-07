@@ -56,11 +56,11 @@
 }
 
 .header .profileImage {
-  margin: 0px 2px 0px 20px;
+  margin: 0px 0px 0px 20px;
 }
 .header .profileImage img {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
 }
 /* CSS style for week day display */
 .week {

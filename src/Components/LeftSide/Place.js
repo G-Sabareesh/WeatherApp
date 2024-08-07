@@ -13,9 +13,7 @@ const Place = () => {
         <div className="card h-100 ">
           <div className="placeimage">
             <img
-              src={
-                "https://th.bing.com/th/id/OIP.CKeytcquvWmF94apP-8ENQHaM9?rs=1&pid=ImgDetMain"
-              }
+              src={resultData.bgimage !== undefined ? resultData.bgimage : "asset/images/default.jpg"}
               className="card-img"
               alt="Img"
             ></img>
