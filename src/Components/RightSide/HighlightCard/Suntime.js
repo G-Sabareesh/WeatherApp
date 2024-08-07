@@ -11,7 +11,7 @@ const Suntime = () => {
           <img
             src={"asset/images/up.png"}
             alt="Weather Icon"
-            style={{ height: "45px" }}
+            style={{ height: "40px" }}
           ></img>
         </div>
         <div className="suntimedisplay d-flex align-items-start justify-content-center flex-column">
@@ -24,13 +24,15 @@ const Suntime = () => {
           <img
             src={"asset/images/down.png"}
             alt="Weather Icon"
-            style={{ height: "45px" }}
+            style={{ height: "40px" }}
           ></img>
         </div>
         <div className="suntimedisplay d-flex align-items-start justify-content-center flex-column">
           <span className="time">{resultData.sunset || "00:00"}</span>
-          {/* <span className="differ">-1m 46s</span> */}
         </div>
+      </div>
+      <div className="additional d-flex align-items-center">
+        <span className="text">Time Zone : {resultData.tz || "tz"}</span>
       </div>
     </div>
   );

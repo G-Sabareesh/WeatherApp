@@ -26,7 +26,7 @@
     height: 100vh !important;
   }
   .rightmain {
-    background-color: white !important;
+    background-color: var( --background-right-container) !important;
     width: 100% !important;
     height: 100vh !important;
     border-radius: 8px !important;
@@ -37,9 +37,9 @@
     width: 100%;
   }
   .highlightscard {
-    background-color: #f6f6f8 !important;
+    background-color: var(--right-card-highlight-card-color) !important;
   }
   .week .weekcard {
-    background-color: #f6f6f8 !important;
+    background-color: var(--right-card-highlight-card-color) !important;
   }
 }

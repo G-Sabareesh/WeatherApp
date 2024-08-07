@@ -27,8 +27,8 @@ const WeekCard = ({ props }) => {
 
   // console.log(props.main);
   return props === "" ? (
-    <div className="weekcard bg-white d-flex flex-column justify-content-evenly align-items-center">
-      <span className={day === 0 ? "weekText active" : "weekText"}>
+    <div className="weekcard d-flex flex-column justify-content-evenly align-items-center">
+      <span className={day === 1 ? "weekText active" : "weekText"}>
         {formatDate(props.dt) || "Day"}
       </span>
       <span>
@@ -44,7 +44,7 @@ const WeekCard = ({ props }) => {
       </span>
     </div>
   ) : (
-    <div className="weekcard bg-white d-flex flex-column justify-content-evenly align-items-center">
+    <div className="weekcard d-flex flex-column justify-content-evenly align-items-center">
       <span className={day === 0 ? "weekText active" : "weekText"}>
         {formatDate(props.dt) || "Day"}
       </span>

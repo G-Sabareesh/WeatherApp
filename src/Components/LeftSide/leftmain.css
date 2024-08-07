@@ -1,6 +1,6 @@
 .leftmain {
-  background-color: #fff;
-  /* background-color: #000000; */
+  background-color: var(--background-left-container);
+  color : var(--textcolor-left-container) !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +28,8 @@
 
 .search input {
   border: none;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 
 .search .input-group-text {
@@ -41,6 +43,7 @@
 
 .search .form-control:focus {
   border-color: none !important;
+  box-shadow: none !important;
 }
 
 .search button {
@@ -111,7 +114,7 @@
 
 .weatherinfo .section2 .child {
   /* background-color: gray; */
-  border-top: 2px solid #f3f3f5;
+  border-top: 2px solid var(--right-left-text-color-dim);
   height: 100%;
   width: 80%;
 }
@@ -160,6 +163,6 @@
   border: none !important;
 }
 
-.card{
+.card {
   border: none !important;
 }

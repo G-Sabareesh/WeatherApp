@@ -76,7 +76,7 @@ const Search = () => {
           <input
             type="text"
             className=" bg-white form-control"
-            placeholder="cityname"
+            placeholder="search city name here..."
             aria-label="cityname"
             aria-describedby="addon-wrapping"
             value={inputData}

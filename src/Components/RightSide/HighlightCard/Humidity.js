@@ -27,7 +27,7 @@ const Humidity = () => {
             ></div>
             <div
               className={
-                resultData.humidity > 0 && resultData.humidity <= 25
+                resultData.humidity >= 0 && resultData.humidity <= 25
                   ? "active"
                   : ""
               }

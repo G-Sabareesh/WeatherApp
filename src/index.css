@@ -1,3 +1,33 @@
+:root {
+  --background-main: #d6d7da;
+  --background-left-container: #fff;
+  --textcolor-left-container: #000;
+  --background-right-container: #f6f6f8;
+  --right-left-text-color-dim: #01010166;
+  --right-left-text-color-active-hover: black;
+  --right-card-highlight-card-color: #fff;
+}
+
+[data-theme="dark"] {
+  --background-main: #3c3c3c;
+  --background-left-container: #1f1f1f;
+  --textcolor-left-container: #fff;
+  --background-right-container: #14141473;
+  --right-left-text-color-dim: #ffffffca;
+  --right-left-text-color-active-hover: rgb(255, 255, 255);
+  --right-card-highlight-card-color: #00000059;
+}
+
+[data-theme="light"] {
+  --background-main: #d6d7da;
+  --background-left-container: #fff;
+  --textcolor-left-container: #000;
+  --background-right-container: #f6f6f8;
+  --right-left-text-color-dim: #01010166;
+  --right-header-text-color-active-hover: black;
+  --right-card-highlight-card-color: #fff;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;

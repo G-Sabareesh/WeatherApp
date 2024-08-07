@@ -37,7 +37,7 @@ const UVIndex = () => {
         percent={uvValue / 100}
         colors={["#558B2F", "#F9A825", "#EF6C00", "	#B71C1C"]}
         arcWidth={0.1} // Width of the gauge arc
-        textColor="#000000"
+        textColor={resultData.now === "day" ? "#000000" : "#fff"}
         needleScale={0.65}
         hideText={true}
       />

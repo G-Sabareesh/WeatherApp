@@ -9,7 +9,7 @@ const AirQuality = () => {
     <div className="humidity">
       <div className="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
         <div className="data d-flex align-items-center">
-          <span className="fs-4">
+          <span className="fs-4 me-4">
             Level : {`${resultData.airquality || "0"}`}
           </span>
           <div className="indicator ms-3">

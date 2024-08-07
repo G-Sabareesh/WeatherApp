@@ -5,16 +5,15 @@ import DataContext from "./Context/DataContext";
 
 function App() {
   const { resultData } = useContext(DataContext);
-  
-  var background = {
-      background : resultData.now === "night" && "#3c3c3c"
-  }
-  
+
+  resultData.now && resultData.now == "day"
+    ? document.querySelector("body").setAttribute("data-theme", "light")
+    : resultData.now == "night"
+    ? document.querySelector("body").setAttribute("data-theme", "dark")
+    : document.querySelector("body").setAttribute("data-theme", "light");
+
   return (
-    <div
-      className="App"
-      style={background}
-    >
+    <div className="App">
       <Main />
     </div>
   );

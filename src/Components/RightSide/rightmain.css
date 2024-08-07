@@ -1,6 +1,6 @@
 .rightmain {
   position: relative;
-  background-color: #f6f6f8;
+  background-color: var(--background-right-container);
   /* background-color: #1f1f1f; */
   /* color: white !important; */
   display: flex;
@@ -24,13 +24,13 @@
   /* background-color: red; */
   font-size: 1.1em;
   font-weight: 600;
-  color: #01010166;
+  color: var(--right-left-text-color-dim);
 }
 
 .header .first .active,
 .header .first .linkText:hover {
-  color: black;
-  border-bottom: 1px solid black;
+  color: var(--right-left-text-color-active-hover);
+  border-bottom: 1px solid var(--right-left-text-color-active-hover);
 }
 .header .degreeText {
   /* background-color: red; */
@@ -39,18 +39,19 @@
   font-weight: 900;
   padding: 5px 10px;
   margin: 2px;
-  color: #01010166;
-  background-color: white;
+  color: var(--right-left-text-color-dim);
+  color: #010101d2;
+  background-color: rgba(255, 255, 255, 0.79);
 }
 
 .header .degreeText:hover {
   color: white;
-  background-color: #01010166;
+  background-color: #010101b9;
 }
 
 .header .second .active {
   color: white;
-  background-color: #0101014d;
+  background-color: #010101b9;
 }
 
 .header .profileImage {
@@ -73,29 +74,30 @@
 }
 
 .week .weekcard {
-  /* background-color: red !important; */
+  background-color: var(--right-card-highlight-card-color);
   height: fit-content;
-  min-width: 120px;
+  min-width: 140px;
   border-radius: 10px;
+  padding: 5px;
 }
 
 .week .weekcard .active {
-  color: black;
+  color: var(--right-left-text-color-active-hover);
 }
 
 .week .weekcard .weekText {
-  color: #01010166;
+  color: var(--right-left-text-color-dim);
   font-size: 1rem;
   font-weight: 600;
 }
 .week .weekcard .weekDeg {
-  color: #01010166;
+  color: var(--right-left-text-color-dim);
   font-size: 1rem;
   font-weight: 500;
   margin: 0px 10px;
 }
 .week .weekcard .active {
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--right-left-text-color-active-hover);
 }
 /* CSS style for highlights */
 .highlights {
@@ -123,6 +125,7 @@
   width: 100%;
   font-size: 2em;
   font-weight: 600;
+  color: var(--right-left-text-color-active-hover);
 }
 
 .highlights .section .cardPlace {
@@ -138,7 +141,7 @@
   /* background-color: red; */
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-evenly;
   flex-wrap: wrap !important;
   /* flex-direction: column; */
   height: 100%;
@@ -148,7 +151,7 @@
 }
 
 .highlightscard {
-  background-color: white;
+  background-color: var(--right-card-highlight-card-color);
   height: 220px;
   width: 250px;
   border-radius: 10px;
@@ -162,15 +165,16 @@
   height: 20%;
   font-size: 1.2em;
   font-weight: 600;
-  color: #01010166;
+  color: var(--right-left-text-color-dim);
 }
 
 .highlightscard .active {
-  color: black;
+  color: var(--right-left-text-color-active-hover);
 }
 
 .highlightscard .cardHighlight {
   /* background-color: pink; */
+  color: var(--right-left-text-color-active-hover) !important;
   height: 80%;
 }
 /* CSS style for UV index */
@@ -219,7 +223,7 @@
   /* background-color: aqua; */
   width: 95%;
   height: 40%;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid var(--right-left-text-color-dim);
 }
 
 .windstatus .additional .icon {
@@ -243,16 +247,16 @@
   /* background-color: red; */
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
-  height: 80%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
 }
 
 .suntime .sunrise,
 .suntime .sunset {
   /* background-color: blue; */
-  height: 40%;
+  height: 50%;
   width: 90%;
 }
 
@@ -268,11 +272,12 @@
   /* background-color: red; */
   width: 60%;
   height: 100%;
+  margin-left: -20px;
 }
 
 .suntime .sunrise .suntimedisplay .time,
 .suntime .sunset .suntimedisplay .time {
-  /* background-color: red; */
+  /* background-color: red;   */
   width: 100%;
   font-size: 1.2em;
   font-weight: 600;
@@ -286,7 +291,18 @@
   font-weight: 500;
   color: #01010166;
 }
+.suntime .additional {
+  /* background-color: aqua; */
+  width: 95%;
+  height: 40%;
+  border-top: 1px solid var(--right-left-text-color-dim);
+} 
 
+.suntime .additional .text {
+  font-size: 0.9em;
+  font-weight: 500;
+  text-indent: 10px;
+}
 /* CSS style fot humidity and airquality*/
 .cardHighlight .humidity {
   /* background-color: red; */
@@ -317,7 +333,7 @@
   width: 80px;
   height: 25px;
   border-radius: 25px;
-  border: 1px solid #01010166;
+  border: 1px solid var(--right-left-text-color-dim);
 }
 
 .humidity .indicator div {
@@ -334,7 +350,7 @@
   /* background-color: aqua; */
   width: 95%;
   height: 40%;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid var(--right-left-text-color-dim);
 }
 
 .humidity .additional .icon {
@@ -377,7 +393,7 @@
   /* background-color: aqua; */
   width: 95%;
   height: 40%;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid var(--right-left-text-color-dim);
 }
 
 .visibility .additional .icon {

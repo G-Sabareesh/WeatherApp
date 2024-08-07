@@ -76,7 +76,7 @@ export const DataProvider = ({ children }) => {
       const response = await fetch(apiUrl + city + `&key=${apikey}`);
       const result = await response.json();
       if (result.cod !== "404") {
-        // console.log(result);
+        console.log(result);
         setfetchResult(result);
       }
     } catch (e) {
@@ -149,6 +149,7 @@ export const DataProvider = ({ children }) => {
     formatDate(fetchValue.location.localtime);
     storeResultData("imagename", fetchValue.current.condition.text);
     storeResultData("icon", fetchValue.current.condition.icon);
+    storeResultData("tz", fetchValue.location.tz_id);
 
     storeResultData("humidity", fetchValue.current.humidity);
     storeResultData("windspeed", fetchValue.current.wind_kph);
@@ -190,7 +191,7 @@ export const DataProvider = ({ children }) => {
         storeResultData("now", "night");
       }
     } else {
-      console.log("no");
+      // console.log("no");
     }
   }, [resultData.sunrise]);
 
