@@ -76,7 +76,7 @@ export const DataProvider = ({ children }) => {
       const response = await fetch(apiUrl + city + `&key=${apikey}`);
       const result = await response.json();
       if (result.cod !== "404") {
-        // console.log(result);
+        // console.log(result); 
         setfetchResult(result);
       }
     } catch (e) {
@@ -200,18 +200,21 @@ export const DataProvider = ({ children }) => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
       } else {
-        console.log("notsupport");
+        // console.log("notsupport");
       }
     }
     function showPosition(position) {
-      console.log(
-        "lat",
-        position.coords.latitude,
-        "lon",
-        position.coords.longitude
-      );
+      // console.log(
+      //   "lat",
+      //   position.coords.latitude,
+      //   "lon",
+      //   position.coords.longitude
+      // );
+      const geoPosition =
+        position.coords.latitude + "," + position.coords.longitude;
+      checkWeather(geoPosition);
     }
-    getLocation()
+    getLocation();
   }, []);
 
   //   console.log("InputValue :", inputValue);
